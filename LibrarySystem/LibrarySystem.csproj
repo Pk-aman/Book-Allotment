@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D822F16D-FAB5-47F9-9AD7-1FC23B0BC9AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibrarySystem</RootNamespace>
+    <AssemblyName>LibrarySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.1.1\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookrecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bookrecord.Designer.cs">
+      <DependentUpon>bookrecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectWithDB.cs" />
+    <Compile Include="createrecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="createrecord.Designer.cs">
+      <DependentUpon>createrecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletebook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="deletebook.Designer.cs">
+      <DependentUpon>deletebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="providebook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="providebook.Designer.cs">
+      <DependentUpon>providebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="recivebook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="recivebook.Designer.cs">
+      <DependentUpon>recivebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updaterecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="updaterecord.Designer.cs">
+      <DependentUpon>updaterecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homecontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homecontrol.Designer.cs">
+      <DependentUpon>homecontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newbook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newbook.Designer.cs">
+      <DependentUpon>newbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="studentrecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="studentrecord.Designer.cs">
+      <DependentUpon>studentrecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="switchcontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="validation.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookrecord.resx">
+      <DependentUpon>bookrecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createrecord.resx">
+      <DependentUpon>createrecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletebook.resx">
+      <DependentUpon>deletebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="providebook.resx">
+      <DependentUpon>providebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recivebook.resx">
+      <DependentUpon>recivebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updaterecord.resx">
+      <DependentUpon>updaterecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homecontrol.resx">
+      <DependentUpon>homecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newbook.resx">
+      <DependentUpon>newbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentrecord.resx">
+      <DependentUpon>studentrecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\back_arrow_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\info_30px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
